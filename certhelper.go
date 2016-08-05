@@ -399,7 +399,7 @@ func ReadRootCA(RootCACertFile string, RootCAKeyFile string) (rootCA []byte, roo
       customError += fmt.Sprintf("\n%s does not exist", RootCAKeyFile)
     }
 
-    return nil, nil, errors.New("customError")
+    return nil, nil, errors.New(customError)
   }
 
   // We should not get there (because both if and else have returns) but just in case
